@@ -1,0 +1,758 @@
+@font-face {
+    font-family: 'ColabThi';
+    src: local("☺"),
+    	url('../fonts/ColabThi.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ColabReg';
+    src: local("☺"),
+    	url('../fonts/ColabReg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ================================ GENERAL ================================= */
+
+/* ========== BY ELEMENT ========== */
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font: 16px ColabThi, Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-image: -webkit-gradient(linear, 0 0%, 0 100%, 
+		from(hsla(0, 0%, 100%, 1)), 
+		color-stop(0.3, hsla(0, 0%, 99%%, 1)),
+		color-stop(0.6, hsla(0, 0%, 97%%, 1)),
+		to(hsla(0, 0%, 93%, 1)));
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: hsla(202, 44%, 51%, 1);
+}
+
+a:hover {
+	text-decoration: underline;
+	color: hsla(202, 44%, 10%, 1);
+}
+
+nav ul {
+	padding-top: 4px;
+	padding-bottom: 8px;
+	margin-bottom: 24px;
+}
+
+nav ul li {
+	margin-bottom: 10px;
+	line-height: 18px;
+}
+
+button {
+	background: transparent;
+}
+
+/* ========== BY CLASS ========== */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: ".";
+	clear: both;	
+	line-height: 0;
+	height: 0;
+}
+
+.margin {
+	width: 95%;
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+/* for some reason using a negative margin on the small nav would redraw after the animation, 
+had to get rid of header margin and use margins on each bar using class="margin" */
+
+/* ================================ HEADER ================================= */
+/* ========== TOP BAR ========== */
+div#hRow1 {
+	height: 27px;
+	padding-top: 4px;
+}
+
+div#hRow1 span.storeLink {	
+	display: none;
+	margin-right: 2.5%; 
+}
+
+div#hRow1 span.storeLink a {	
+	line-height: 27px;
+	font-size: 15px;	
+}
+
+div#hRow1 span.storeLink a:hover {
+	color: hsla(202, 44%, 51%, 1);	
+}
+
+span.storeLink {
+	float: right;	
+}
+
+/* ========== MIDDLE BAR ========== */
+div#hRow2 {
+	margin-bottom: 16px;
+}
+
+div#hRow2 img[src*="lg"] {
+	display: inline;
+	float: left;
+}
+
+div#hRow2 img[src*="sm"] {
+	display: none;
+	float: left;
+	margin: 10px 0 6px 0;
+} 
+
+div#searchAndButton {
+	float: right;
+	position: relative;
+	width: calc(40% - 26px); 
+	margin-top: 6.5px;
+	padding-right: 24px; /* room for search button */
+	border: 1px solid hsla(0, 0%, 59%, 1);
+}
+
+div#searchAndButton input {
+	height: 24px;
+	width: 100%;
+	text-indent: .7em;
+}
+
+div#searchAndButton button {
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+
+div#expansionToggles {
+	display: none;
+	float: right;
+	margin-top: 6.5px;
+}
+
+div#expansionToggles a {
+	display: inline-block; 
+	line-height: 28px;
+}
+
+div#expansionToggles img {
+	vertical-align: middle;
+	margin-left: 8px;
+}
+
+/* ========== BOTTOM BAR ========== */
+div#hRow3 a {
+	font-size: 18px;
+	line-height: 43px;
+}
+
+div#hRow3 span.storeLink {
+	display: inline-block;
+}
+
+ul#mainNav li {
+	float: left;
+}
+
+ul#mainNav a {	
+	padding: 0 20px;
+	color: hsla(0,0%,0%,1);
+}
+
+ul#mainNav a.first {
+	 padding-left: 0; 
+}
+
+ul#mainNav a:hover {	
+	color: hsla(202, 44%, 51%, 1);	
+	text-decoration: none;
+}
+
+/* ================================ BANNER 1 ================================= */
+section#banner1 {
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	border-top: 5px solid hsla(0, 0%, 93%, 1);
+	max-width: 1600px;
+}
+
+div#b1BannerWrapper {
+	height: 0;
+	padding-bottom: 30%; /* cuts off bottom of image by ~3.3%, must use padding to set a percentage height */
+	overflow: hidden;	
+} 
+
+div#b1Slider img {
+	display: block;
+	width: 100%;
+	margin-top: -1.5%; /* shift image down to center */
+}
+
+div#b1pVerticalPos {
+	position: absolute;
+	top: 5%;
+	width: 100%;
+}
+
+div#b1pHorizontalPos {
+	width: 95%;
+	margin: 0 auto;
+	max-width: 1180px;
+}
+
+div#b1PromoSlider {
+	left: 0;
+	width: 300px;
+	background-color: hsla(0, 0%, 100%, 1);
+}
+
+div#b1PromoSlider .slides > li {
+	width: calc(100% - 50px) !important; 
+	padding: 18px 25px;
+}
+
+div#b1PromoSlider .slides > li:nth-child(4) {
+	background-color: hsla(8, 81%, 49%, 1);
+	color: white;
+}
+
+div#b1PromoSlider img {
+	width: 197px;
+	margin: 5px 0 18px 0;
+}
+
+div#b1PromoSlider h3 {
+	margin-bottom: 30px;
+	font-size: 28px;
+}
+
+div#b1PromoSlider a {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 4px;
+	color: hsla(0,0%,0%,1);
+}
+
+div#b1PromoSlider .slides > li:nth-child(4) a {
+	color: white;
+}
+
+/* ================================ CONTENT 1 ================================= */
+section#content1 {
+	padding: 2.5% 0 2.5% 0;
+}
+
+nav#discover {
+	float: left;
+	width: 23.5%;
+	margin-right: 2%;
+}
+
+nav#discover h2 {
+	line-height: 47px;
+	font-size: 40px;
+}
+
+nav#discover h2, div#forHomeForWork {
+	margin: 9.5px 0 19px 0;
+	height: 47px; /* div grows for some reason w/out this */
+	line-height: 47px;
+}
+
+nav#discover li {
+	margin-bottom: 14px;
+	line-height: 25px;
+}
+
+nav#discover li a {
+	font-size: 22px;
+}
+
+div#c1Row1, div#c1Row2 {
+	float: left;
+	width: 74%;
+}
+
+div#c1Row1 {
+	padding-bottom: 20px;
+}
+
+div#forHomeForWork h2 {
+	display: inline-block;
+	vertical-align: middle;	
+	margin-right: 20px;
+	font-size: 40px; 
+}
+
+a#forWork {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 7px 12px;
+	font-size: 14px;
+	color: white;
+	background-color: hsla(205, 64%, 40%, 1);
+	transition: background-color .5s ease;
+}
+
+a#forWork:hover {
+	background-color: hsla(205, 66%, 29%, 1);
+}
+
+div#c1Row1 li, div#c1Row2 nav {
+	float: left;
+	width: 31.6%;
+	margin-left: 2.5%;
+}
+
+div#c1Row1 li:first-child, div#c1Row2 nav:first-child {
+	margin-left: 0;
+}
+
+div#c1Row1 li {
+	margin-bottom: 20px;
+}
+
+div#c1Row1 li a {
+	display: block;
+	line-height: 20px;
+}
+
+div#c1Row1 li img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 8px;
+}
+
+div#c1Row2 h3 {
+	margin: 6.5px 0 14px 0;
+	font-size: 34px;
+}
+div#c1Row2 li {
+	line-height: 18px;
+}
+
+/* ================================ BANNER 2 ================================= */
+section#banner2 {
+	padding: 2.5% 0;
+	background-color: hsla(205, 66%, 40%, 1);
+	color: white;
+	font: 17px ColabThi, Arial, Helvetica, sans-serif;
+}
+
+nav#followUs {
+	float: left;
+	width: 23%;
+}
+
+nav#followUs li {
+	margin-bottom: 11px;
+	line-height: 20px;
+}
+
+nav#followUs a {
+	font-size: 18px;
+	color: white;
+}
+
+nav#followUs h3 {
+	margin: 10px 0 21px 0;
+	line-height: 47px;
+	font-size: 40px;
+}
+
+ul#promos {
+	float: right;
+	position: relative; 
+	width: 70%;
+	margin-top: 24px;
+	padding: 3%;
+	background-color: hsla(205, 66%, 33%, 1);
+	transition: all .5s ease;
+}
+
+ul#promos:hover {
+	background-color: hsla(205, 66%, 29%, 1);
+}
+
+ul#promos img {
+	float: left;
+	margin-right: 24px;
+}
+
+ul#promos h3 {
+	line-height: 33px;
+	font-size: 25px;
+}
+
+ul#promos p {
+	line-height: 25px;
+	font-size: 17px;
+}
+
+/* ================================ CONTENT 2 ================================= */
+section#content2 {
+	margin-top: 2.5%;
+	font-family: ColabThi, Arial, Helvetica, sans-serif
+}
+
+section#content2 .column {
+	float: left;
+	width: 24.5%;
+}
+
+section#content2 h2, section#content2 h3 {
+	margin-bottom: 14.5px;
+	color: hsla(0,0%,0%,1);
+	font: 18px ColabReg, Arial, Helvetica, sans-serif;
+}
+
+.column.one a {
+	font-size: 18px;
+	color: hsla(0,0%,0%,1);
+}
+
+.column.one img {
+	 vertical-align: middle; /* figure out why img positions so far up without this style */
+	 margin-right: 10px;
+}
+
+/* ================================ FOOTER ================================= */
+footer li, footer a {
+	font-size: 15px;
+}
+
+footer span {
+	float: right; 
+	margin-bottom: 2px;
+	line-height: 36px;
+}
+
+footer img[alt="logo"] {
+	vertical-align: middle;
+}
+
+footer ul {
+	float: right;
+	clear: right;
+	margin-bottom: 20px;
+}
+
+footer ul li {
+	float: left;
+	margin-left: 20px;
+	line-height: 26px;
+}
+
+footer ul li:last-child {
+	color: hsla(0,0%,0%,1);
+}
+
+div#locationLanguage {
+	float: left;
+	margin-bottom: 20px;
+	line-height: 36px;
+}
+
+div#locationLanguage img {
+	vertical-align: middle;
+}
+
+/* ================================ MEDIA < 900px ================================= */
+@media screen and (max-width: 900px) {
+	/* ========== HEADER ========== */
+	/* smaller padding between nav links */
+  	ul#mainNav a {
+		padding: 0 13px; 
+	}
+	/* change storeLink location */
+	div#hRow1 span.storeLink { 
+		display: inline-block;
+	}
+	div#hRow3 span.storeLink a {
+		display: none;
+	}
+	/* why doesnt this work?! */
+	div#searchAndButton {
+		display: block;
+	}
+
+	/* ========== BANNER 1 ========== */
+	div#b1BannerWrapper {
+		padding-bottom: 33.5%; 
+		overflow: hidden;	
+	} 
+
+	div#b1Slider img {
+		margin-top: 0%; 
+	}
+
+	div#b1PromoSlider {
+		width: 270px;	
+	}
+
+	div#b1PromoSlider .slides > li {
+		width: calc(100% - 40px) !important; 
+		padding: 12.5px 20px;
+		background-color: hsla(0, 0%, 93%, 1);
+	}
+
+	div#b1PromoSlider h3 {
+		font-size: 24px;
+	}
+
+	div#b1PromoSlider a {
+		
+	}
+	
+	/* ========== CONTENT 1 ========== */
+	nav#discover h2, div#forHomeForWork h2 {
+		font-size: 34px;
+	}
+
+	nav#discover li {
+		float: left;
+		margin-right: 21px;
+	}
+
+	nav#discover li a {
+		font-size: 18px;
+	}
+
+	nav#discover, section#content1 #c1Row1, section#content1 #c1Row2 {
+		width: 100%;
+	}
+
+	/* ========== BANNER 2 ========== */
+	ul#promos {
+		width: 94%; /* account for padding */
+	}
+
+	nav#followUs {
+		width: 100%;
+	}
+
+	nav#followUs h3 {
+		font-size: 25px;
+		line-height: 33px;
+		margin: 6px 0 14px 0;
+	}
+
+	nav#followUs li {
+		float: left;
+		padding-right: 20px;
+	}
+
+	/* ========== CONTENT 2 ========== */
+	section#content2 .column {
+		width: 49%;
+	}
+	.column.three {
+		clear: both;
+	}
+
+	/* ========== FOOTER ========== */
+	footer span, footer ul {
+		float: left;
+		clear: both;
+	}
+
+	footer ul li {
+		margin: 0 20px 0 0;
+	}
+}
+
+/* ================================ MEDIA 680px ================================= */
+@media (max-width: 680px) {
+	/* ========== CONTENT 1 ========== */
+	div#c1Row1 li, div#c1Row2 nav {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	div#c1Row1 li {
+		margin-bottom: 20px;
+	}
+
+	div#c1Row1 li img {
+		float: left;
+		width: 48%;
+		height: auto;
+		margin-right: 4%;
+	}
+
+	/* ========== BANNER 1 ========== */
+	ul#promos {
+		transition: none;
+	}
+
+	div#b1pVerticalPos {
+		position: static; /* dont move up absolutely anymore */
+		width: auto;	
+		top: 0;
+	}
+
+	div#b1pHorizontalPos {
+		width: auto;
+		margin: 0;
+	}
+	
+	div#b1PromoSlider {
+		width: auto;
+	}
+
+	div#b1PromoSlider .slides > li {
+		width: calc(100% - 80px) !important; 
+		padding: 9px 40px;
+	}
+
+	div#b1PromoSlider img {
+		margin: 0;
+	}
+
+	div#b1PromoSlider h3 {
+		margin: 4px 0 6.5px 0;
+		font-size: 20px;
+	}
+
+	div#b1PromoSlider a {
+		width: auto;
+		margin: 0 10px 0 0;
+		font-size: 15px;
+	}
+
+	div#b1Slider ol {
+		display: none;
+	}
+}
+
+/* ================================ MEDIA 540px ================================= */
+@media (max-width: 540px) {
+	/* ========== HEADER ========== */
+  	div#hRow1 {
+  		margin-top: 0;
+		background-color: hsla(0, 0%, 90%, 1);
+	}
+
+	div#hRow2 {
+		margin-bottom: 9px;
+	}
+
+	/* change logo size */
+	div#hRow2 img[src*="lg"] {
+		display: none;
+	}
+
+	div#hRow2 img[src*="sm"] {
+		display: inline;
+	}
+
+	/* hide search input initially */
+	div#searchAndButton {
+		display: none;
+
+		width: calc(100% - 26px); /* padding & border arent included in width */
+	}
+
+	/* display small nav/search toggle buttons */
+	div#expansionToggles {
+		display: block;
+	}
+
+	/* hide hRow3 (largeNav) initially */
+	div#hRow3 {
+		display: none;
+	}
+
+	/* change mainNav to be vertical */
+	ul#mainNav li {
+		float: none;
+	}
+
+	ul#mainNav a {	
+		display: inline-block;
+		width: 100%;
+		padding: 0;
+		border-top: 1px solid white;
+		text-indent: 11px;
+		color: white;
+		background-color: hsla(205, 63%, 40%, 1);
+	}
+
+	ul#mainNav a:hover {	
+		color: white; /* dont know why this is necessary, but it is */
+		background-color: hsla(203, 75%, 16%, 1);	
+	}
+
+	/* ========== BANNER 1 ========== */
+	div#b1BannerWrapper {
+		padding-bottom: 55%; /* allow 166% more of img to be shown */	
+	} 
+
+	div#b1Slider img {
+		position: relative;
+		left: -40%;  /* re-center img bc its relatively larger now */
+		width: 166%;
+	}
+
+	section#content1 nav#discover li {
+		float: none;
+		margin-right: 0px;
+	}
+
+	/* ========== CONTENT 1 ========== */
+	div#c1Row1 li img {
+		width: 41%;
+	}
+
+	/* ========== BANNER 2 ========== */
+	div#promos h3 {
+naline-height: 27px;
+		font-size: 21px;
+	}
+
+	div#promos img {
+nawidth: 130px;
+	}
+
+	nav#followUs li {
+		float: none;
+		padding-right: 0px; 
+	}
+
+	/* ========== CONTENT 2 ========== */
+	section#content2 .column {
+		width: 99%;
+	}
+
+}
+
+/* only way to override jQuery "display: none" - inline */
+@media (min-width: 540px) {
+	/* ========== HEADER ========== */
+	div#searchAndButton { 
+		display: block !important;
+	}
+
+	div#hRow3 { 
+		display: block !important;
+	}
+}
