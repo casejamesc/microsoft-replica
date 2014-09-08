@@ -725,12 +725,12 @@ div#locationLanguage img {
 
 	/* ========== BANNER 2 ========== */
 	div#promos h3 {
-naline-height: 27px;
+		line-height: 27px;
 		font-size: 21px;
 	}
 
 	div#promos img {
-nawidth: 130px;
+		width: 130px;
 	}
 
 	nav#followUs li {
