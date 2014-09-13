@@ -7,6 +7,6 @@ Notes:
   - navigation converts to mobile view
 
 
-![Login Screenshot](https://github.com/casejamesc/microsoft-replica/blob/master/images/screenshots/1.jpg "login")
+![Desktop Screenshot](https://github.com/casejamesc/microsoft-replica/blob/master/images/screenshots/1.jpg "desktop")
 
-![Check In Screenshot](https://github.com/casejamesc/microsoft-replica/blob/master/images/screenshots/2.jpg "check-in")
+![Mobile Screenshot](https://github.com/casejamesc/microsoft-replica/blob/master/images/screenshots/2.jpg "mobile")
